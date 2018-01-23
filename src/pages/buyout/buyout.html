@@ -1,6 +1,4 @@
-
 <ion-header>
-
   <ion-navbar>
     <ion-title>Buy Out</ion-title>
   </ion-navbar>
@@ -9,6 +7,8 @@
 
 
 <ion-content padding>
-    <p>I'm on {{ commodity }} page</p>
-    <button ion-button (click)="goToHome()">Buy</button>
+  <h2>Your Order</h2>
+  <p>Name: {{ commodity.name }}</p>
+  <p>Quantity: {{ commodity.quantity }}</p>
+  <button ion-button (click)="goToHome()">Buy</button>
 </ion-content>

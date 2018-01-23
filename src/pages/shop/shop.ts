@@ -11,7 +11,7 @@ export class ShopPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  goToBuyout(commodity: string){
-    this.navCtrl.push(BuyoutPage, {commodityName: commodity});
+  goToBuyout(commodity: {name:string, quantity:number}){
+    this.navCtrl.push(BuyoutPage, commodity);
   }
 }

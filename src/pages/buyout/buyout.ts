@@ -9,7 +9,7 @@ import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
   templateUrl: 'buyout.html',
 })
 export class BuyoutPage implements OnInit {
-  commodity:string;
+  commodity:{name:string, quantity: number};
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -18,7 +18,7 @@ export class BuyoutPage implements OnInit {
   }
 
   ngOnInit(){
-    this.commodity = this.navParams.get('commodityName');
+    this.commodity = this.navParams.data;
   }
 
   goToHome(){
